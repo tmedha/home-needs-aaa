@@ -1,0 +1,133 @@
+body{
+    background-color: #CAE9FF;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+h1,h2,h3{
+    color: #1B4965;
+}
+
+
+button{
+    color: #1B4965;
+    background-color: #1B4965;
+    background: none;
+    border: none;
+
+}
+
+input{
+    border: 2px solid #1B4965;
+    border-radius: 5px;
+    fill: #BEE9E8;
+}
+
+footer{
+    background-color: #1B4965;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+}
+
+footer a{
+    margin: 0 5px;
+    color: #fff;
+}
+
+footer a:hover{
+    text-decoration: none;
+}
+
+.mymenubar{
+    display: flex;
+    align-items: center;
+}
+
+.buttonrow{
+    justify-content: end;
+    margin-left: 50pt;
+}
+
+.searchbar{
+    display: flex;
+    margin-left: 10pt;
+    flex-direction: row;
+}
+
+.btn-custom{
+    background-color:  #5FA8D3;
+    color: #1B4965;
+}
+
+.btn-custom2{
+    background-color:  #1B4965;
+    color: #5FA8D3;
+}
+
+.mainpart{
+    /* padding: 70px;
+    align-items: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.row {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+}
+
+.list-group-item{
+    color: #1B4965;
+    background-color: transparent;
+    width: 80%;
+    display: inline-flex;
+}
+
+.text-bg-customNEW{
+    background-color:  #fff;
+    color: #DF2D16;
+}
+
+.text-bg-CA{
+    background-color:  #62B6CB;
+    color: #fff;
+}
+
+.list-group-flush{
+    margin: 10pt;
+}
+
+.servicebuttons{
+    display: inline-flex;
+    padding-left: 90pt;
+}
+
+.aboutusinfo{
+    padding-right: 70pt;
+    color: #5FA8D3;
+}
+
+.servicesprovided{
+    margin-left: 10pt;
+}
+
+.companyname{
+    margin-left: 10pt;
+}
+
+.companylogo{
+    justify-content: center;
+    align-items: center;
+    margin-right: 100pt;
+    margin-left: 0;
+}
