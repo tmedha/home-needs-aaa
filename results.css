@@ -1,0 +1,164 @@
+body{
+    background-color: #CAE9FF;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+h1,h2,h3,h7{
+    color: #1B4965;
+}
+
+
+input{
+    border: 2px solid #1B4965;
+    border-radius: 5px;
+    fill: #BEE9E8;
+}
+
+button{
+    color: #1B4965;
+    background-color: #1B4965;
+    background: none;
+    border: none;
+
+}
+
+footer{
+    background-color: #1B4965;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+footer a{
+    margin: 0 5px;
+    color: #fff;
+}
+
+footer a:hover{
+    text-decoration: none;
+}
+
+.mymenubar{
+    display: flex;
+    align-items: center;
+}
+
+.searchbar{
+    display: flex;
+    margin-left: 10pt;
+    flex-direction: row;
+}
+
+.resultsrow{
+    margin-left: 20pt;
+}
+
+.eitheror{
+    margin-left: 20pt;
+    color:#1B4965;
+}
+
+.radio{
+    color:#1B4965;
+}
+
+.filters{
+    margin-left: 900px;
+}
+
+.buttonrow{
+    justify-content: end;
+    /* padding-left: 10%;*/ 
+    margin-left: 50pt;
+}
+
+.mainpart{
+    /* padding: 70px;
+    align-items: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.btn-custom{
+    background-color:  #5FA8D3;
+    color: #1B4965;
+}
+
+.text-bg-customNEW{
+    background-color:  #fff;
+    color: #DF2D16;
+}
+
+.text-bg-customM{
+    background-color:  #fff;
+    color: #08B2E3;
+}
+
+.text-bg-customEX{
+    background-color:  #fff;
+    color: #19381F;
+}
+
+.text-bg-customLA{
+    background-color:  #fff;
+    color: #AA1155;
+}
+
+.text-bg-customC{
+    background-color:  #119DA4;
+    color: #fff;
+}
+
+.text-bg-customS{
+    background-color:  #19647E;
+    color: #fff;
+}
+.results{
+    margin-left: 25pt;
+    display: inline-flex;
+}
+
+.card {
+    margin-right: 10px; /* Adjust the value as needed */
+    display: inline-flex;
+    margin-bottom: 10px;
+  }
+  
+  .card:last-child {
+    margin-right: 0; /* Remove margin from the last card */
+    margin-left: 10px; /* Adjust the value as needed */
+
+  }
+
+  .card-body{
+    color:#1B4965;
+  }
+
+  .checkbox-column {
+    position: absolute;
+    top:20%;
+    right: 130px; /* Adjust as needed */
+    transform: translateY(10%);
+    transform: translateX(70%);
+  }
+  
+  .checkbox-column label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: x-small;
+    color: #5FA8D3 ;
+  }
+  
+  
+
+
+  
