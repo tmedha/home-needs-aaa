@@ -1,0 +1,92 @@
+body {
+    background-color: #CAE9FF; /* Updated background color */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange children vertically */
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+    margin: 0; /* Reset margin */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #1B4965; /* Updated navbar color */
+}
+
+/* Navbar Brand Styles */
+.navbar-brand {
+    margin-right: auto;
+    color: #fff; /* Navbar brand text color */
+}
+
+/* Navbar Link Styles */
+.navbar-nav .nav-link {
+    color: #fff; /* Navbar link text color */
+    font-weight: bold; /* Bold font for navbar links */
+}
+
+/* Card Styles */
+.card {
+    border-radius: 15px; /* Adjust the value to control the curvature of the edges */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: auto; /* Auto margin to center vertically */
+    margin-bottom: auto; /* Auto margin to center vertically */
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0; /* Adjust border-radius to match the top corners of the card */
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1B4965; /* Updated footer color */
+    padding: 20px 0; /* Increased padding to push footer further down */
+    text-align: center;
+    margin-top: auto; /* Auto margin to center vertically */
+}
+
+footer .social-media {
+    margin: 0 auto; /* Center social media links */
+}
+
+footer .terms-policies {
+    float: right; /* Align terms and policies to the right */
+}
+
+footer a {
+    margin: 0 5px;
+    color: #fff; /* Link color */
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+/* Text box color */
+input[type="text"],
+input[type="password"] {
+    background-color: #BEE9E8; /* Text box color */
+}
+
+/* Login Heading Styles */
+.card-header h4 {
+    background-color: #62B6CB; /* Updated color around the Login heading */
+    padding: 10px;
+    margin: -20px -10px -12px; /* Adjust margins to fit */
+    border-radius: 15px 15px 0 0; /* Adjust border-radius */
+}
+
+/* Login Button Styles */
+.btn-primary {
+    background-color: #62B6CB; /* Updated Login button color */
+    border: none; /* Remove button border */
+}
+
+.btn-primary:hover {
+    background-color: #4597A8; /* Darker color on hover */
+}

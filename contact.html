@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="client_login_styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="landing_page.html"><img src="logo.png" alt="Logo" style="max-height: 40px;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto"> <!-- Align to the right -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vendor_signup.html">Sign Up as a Professional</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Contact Us</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="contactForm" onsubmit="submitForm()">
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Problem Category:</label>
+                                <select class="form-control" id="category" name="category" required>
+                                    <option value="">Select Category</option>
+                                    <option value="Category 1">Category 1</option>
+                                    <option value="Category 2">Category 2</option>
+                                    <option value="Category 3">Category 3</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Problem Description:</label>
+                                <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <div class="mt-3 text-center" id="message"></div>
+                        </form>
+                        <div class="mt-3 text-center">
+                            <p><a href="faq.html">Click here</a> for quick answers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a href="https://facebook.com">Facebook</a> |
+                    <a href="https://twitter.com">Twitter</a> |
+                    <a href="https://instagram.com">Instagram</a>
+                </div>
+                <div class="col">
+                    <a href="contact.html">Contact</a> |
+                    <a href="terms.html">Terms and Policies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="client_login_script.js"></script>
+    <script>
+        function submitForm() {
+            var messageDiv = document.getElementById("message");
+            messageDiv.innerText = "Ticket Submitted";
+        }
+    </script>
+</body>
+</html>
