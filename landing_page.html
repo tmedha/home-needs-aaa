@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="landing_page.css">
 
     <title>Dr.Casa</title>
+    <script src="searchqueries.js" defer></script>
     <script src="necessary.js" defer></script>
+    
   </head>
   <body>
     <div class="mymenubar">
@@ -30,7 +32,7 @@
         <input type="text" id="stateabbrev" name="stateabbrev" minlength="2" maxlength="2" placeholder="State" required>
         <input type="text" id="zipcode" name="zipcode" minlength="5" maxlength="5" placeholder="Zip Code" required><br>
         <div>
-       <button>Enter</button> 
+       <button onclick="goToSearchResults()" >Enter</button> 
         </div>
     </div>
 
@@ -51,6 +53,7 @@
           <a href="https://instagram.com">Instagram</a> |
         </div>
         <div class="col">
+          <a href="about_us.html">About Us</a>
           <a href="">Contact</a>
           <a href="">Terms and Policies</a>
         </div>
