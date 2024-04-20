@@ -13,6 +13,7 @@
     <script src="searchqueries.js" defer></script>
     <script src="necessary.js" defer></script>
     
+    
   </head>
   <body>
     <div class="mymenubar">
@@ -25,17 +26,15 @@
         </div>
     </div>
     
-
     <div class="mainpart">
-        <input type="text"  id="servicecompanyname" name="servicecompanyname" placeholder="Service/Company Name">
-        <input type="text" id="cityname" name="cityname" placeholder="City" required>
-        <input type="text" id="stateabbrev" name="stateabbrev" minlength="2" maxlength="2" placeholder="State" required>
-        <input type="text" id="zipcode" name="zipcode" minlength="5" maxlength="5" placeholder="Zip Code" required><br>
-        <div>
-       <button onclick="goToSearchResults()" >Enter</button> 
-        </div>
+      <input type="text"  id="servicecompanyname" name="servicecompanyname" minlength="5" maxlength="15" placeholder="Service/Company Name">
+      <input type="text" id="cityname" name="cityname" minlength="4" maxlength="15" placeholder="City" required>
+      <input type="text" id="stateabbrev" name="stateabbrev" minlength="2" maxlength="2" placeholder="State" required>
+      <input type="text" id="zipcode" name="zipcode" minlength="5" maxlength="5" placeholder="Zip Code" required><br>
+      <div>
+     <button id="submitButton" onclick="goToSearchResults()" >Enter</button> 
+      </div>
     </div>
-
     
     
     <!-- Optional JavaScript -->
@@ -43,7 +42,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  
+    <script src="functions.js" defer></script>
     <footer>
     <div>
       <div class="row">

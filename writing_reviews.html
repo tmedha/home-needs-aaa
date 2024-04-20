@@ -12,18 +12,20 @@
     <title>Dr.Casa</title>
     <script src="necessary.js" defer></script>
     <script src="review.js" defer></script>
+    <script src="searchqueries.js" defer></script>
+    <script src="functions.js" defer></script>
   </head>
   <body>
     <div class="mymenubar">
       <img src="Untitled design (5).png">
       <h1>Dr.Casa</h1>
       <div class="searchbar">
-        <input type="text"  id="name" name="name" placeholder="Service/Company Name">
+        <input type="text"  id="servicecompanyname" name="servicecompanyname" placeholder="Service/Company Name">
         <input type="text" id="cityname" name="cityname" placeholder="City" required>
         <input type="text" id="stateabbrev" name="stateabbrev" minlength="2" maxlength="2" placeholder="State" required>
-        <input type="text" id="zipcode" name="zipcode" minlength="5" maxlength="5" placeholder="Zip Code" required>
+        <input type="text" id="zipcode" name="zipcode" minlength="5" maxlength="5" placeholder="Zip Code" required><br>
         <div>
-      <button>Enter</button> 
+       <button id="submitButton" onclick="goToSearchResults()" >Enter</button> 
         </div>
       </div>
       <div class="buttonrow">
@@ -44,7 +46,7 @@
           </div>
       </div>
 
-      <form id="reviewForm" onsubmit="submitReview(event)">
+      <form id="reviewForm" action="insert_review_info.php" method="post"onsubmit="submitReview(event)">
       <div class="rating">
         <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
         <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
@@ -80,7 +82,8 @@
           <a href="https://instagram.com">Instagram</a> |
         </div>
         <div class="col">
-          <a href="">Contact</a>
+          <a href="about_us.html">About Us</a>
+          <a href="contact.html">Contact</a>
           <a href="">Terms and Policies</a>
         </div>
       </div>

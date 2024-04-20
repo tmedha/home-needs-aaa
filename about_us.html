@@ -10,18 +10,20 @@
     <link rel="stylesheet" href="about_us.css">
     <title>Dr.Casa</title>
     <script src="necessary.js" defer></script>
+    <script src="searchqueries.js" defer></script>
+    <script src="functions.js" defer></script>
   </head>
   <body>
     <div class="mymenubar">
       <img src="/Users/alenisgchavarria/Desktop/Dr Casa UI - My Screens/About Us/Untitled design (5).png">
       <h1>Dr.Casa</h1>
       <div class="searchbar">
-        <input type="text"  id="name" name="name" placeholder="Service/Company Name">
+        <input type="text"  id="servicecompanyname" name="servicecompanyname" placeholder="Service/Company Name">
         <input type="text" id="cityname" name="cityname" placeholder="City" required>
         <input type="text" id="stateabbrev" name="stateabbrev" minlength="2" maxlength="2" placeholder="State" required>
-        <input type="text" id="zipcode" name="zipcode" minlength="5" maxlength="5" placeholder="Zip Code" required>
+        <input type="text" id="zipcode" name="zipcode" minlength="5" maxlength="5" placeholder="Zip Code" required><br>
         <div>
-      <button>Enter</button> 
+       <button id="submitButton" onclick="goToSearchResults()" >Enter</button> 
         </div>
       </div>
       <div class="buttonrow">

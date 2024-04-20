@@ -12,6 +12,7 @@
     <title>Dr.Casa</title>
     <script src="necessary.js" defer></script>
     <script src="review.js" defer></script>
+    <script src="functions.js" defer></script>
   </head>
   <body>
     <div class="mymenubar">
@@ -23,7 +24,7 @@
         <input type="text" id="stateabbrev" name="stateabbrev" minlength="2" maxlength="2" placeholder="State" required>
         <input type="text" id="zipcode" name="zipcode" minlength="5" maxlength="5" placeholder="Zip Code" required>
         <div>
-      <button>Enter</button> 
+      <button id="submitButton" onclick="goToSearchResults()">Enter</button> 
         </div>
       </div>
       <div class="buttonrow">
@@ -37,7 +38,7 @@
     <div>
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="landing_page.html">Home</a></li>
           <li class="breadcrumb-item"><a href="#">Appliance Repair</a></li>
           <li id="activ"class="breadcrumb-item active" aria-current="page">Major Appliance Repair</li>
         </ol>
@@ -51,14 +52,14 @@
         <div class="col">
           <div class="rating">
             <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
-            <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
-            <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
-            <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
-            <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+            <input type="radio" id="star4" name="rating" value="4" class="highlighted"><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3" class="highlighted"><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2" class="highlighted"><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1" class="highlighted"><label for="star1"></label>
           </div>
 
             <h2 id="w">Washing Machine Repair</h2>
-            <div class="row companyname">
+            <div class="companyname withBadge">
                 <h3 id="w">Company Name</h3>
                 <span class="badge text-bg-customNEW">New</span>
             </div>
@@ -66,8 +67,32 @@
                 <h4 id="w">Rate: $$$</h4>
             </div>
             <h3>AVAILABILITY</h3>
-            <h4>Scroll thing for day</h4>
-            <h4>Scroll thing for time</h4>
+            <div class="togglebuttongroup">
+              <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btncheck1">Day 1</label>
+              
+                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btncheck2">Day 2</label>
+              
+                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btncheck3">Day 3</label>
+              </div>
+            </div>
+            
+            <div>
+              <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btncheck4">Time 1</label>
+              
+                <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btncheck5">Time 2</label>
+              
+                <input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btncheck6">Time 3</label>
+              </div>
+            </div>
+            
             <button>
                 <div class="row">
                     <h5 id="w">Add to Cart</h5><h6>$$$</h6>
