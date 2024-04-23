@@ -1,0 +1,163 @@
+.breadcrumb{
+    background-color: transparent;
+}
+
+#active{
+    color:#1B4965;
+}
+body{
+    background-color: #CAE9FF;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+h1{
+    color: #1B4965;
+}
+
+.fa-heart{
+    color: #CAE9FF;
+}
+
+#w{
+    color:#fff;
+}
+
+button{
+    color: #1B4965;
+    background-color: #1B4965;
+    background: none;
+    border: none;
+
+}
+
+input{
+    border: 2px solid #1B4965;
+    border-radius: 5px;
+    fill: #BEE9E8;
+}
+
+footer{
+    background-color: #1B4965;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+footer a{
+    margin: 0 5px;
+    color: #fff;
+}
+
+footer a:hover{
+    text-decoration: none;
+}
+
+.mymenubar{
+    display: flex;
+    align-items: center;
+}
+
+.buttonrow{
+    justify-content: end;
+    margin-left: 50pt;
+}
+
+.searchbar{
+    display: flex;
+    margin-left: 10pt;
+    flex-direction: row;
+}
+
+.rowofimg{
+    padding-left: 90pt;
+}
+
+.mainpart{
+    /* padding: 70px;
+    align-items: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.randr{
+    display:grid;
+    place-items: center;
+}
+
+.companyname.withBadge h3,
+.companyname.withBadge span.badge {
+    display: inline-block;
+    vertical-align: middle; /* Align vertically to middle */
+}
+
+
+
+.row.srvI {
+    display: flex;
+    align-items: end; /* Center vertically */
+    justify-content: end; /* Center horizontally */
+    text-align: end; /* Center text within the row */
+    margin-top: 0px; /* Optional: Adjust top margin as needed */
+    padding-right: 300pt ;
+    background-color: #1B4965;
+    color:#CAE9FF;
+}
+
+.row.companyname{
+    text-align: end;
+    display: flex;
+    align-items: end; /* Center vertically */
+    justify-content: end;
+}
+
+.rating {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label:before {
+    content: '★';
+    margin: 5px;
+  }
+  
+  .rating .highlighted + label:before{
+    color:yellow;
+  }
+
+  .text-bg-customNEW{
+    background-color:  #fff;
+    color: #DF2D16;
+}
+
+.togglebuttongroup{
+    fill: white;
+}
+
+#img1{
+    height: 270px;
+    width: 270px;
+    padding-right: 10pt;
+    padding-bottom: 15pt;
+    padding-top: 0pt;
+}
+
+#img2{
+    height: 270px;
+    width: 270px;
+    padding-bottom: 15pt;
+    padding-top: 0pt;
+}
