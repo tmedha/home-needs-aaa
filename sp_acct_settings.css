@@ -1,0 +1,117 @@
+body{
+    background-color: #CAE9FF;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+h1,h2{
+    color: #1B4965;
+}
+
+h3,h4{
+    color:white;
+}
+
+button{
+    color: #1B4965;
+    background-color: #1B4965;
+    background: none;
+    border: none;
+
+}
+
+input{
+    border: 2px solid #1B4965;
+    border-radius: 5px;
+    fill: #BEE9E8;
+}
+
+footer{
+    background-color: #1B4965;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+}
+
+footer a{
+    margin: 0 5px;
+    color: #fff;
+}
+
+footer a:hover{
+    text-decoration: none;
+}
+
+.mymenubar{
+    display: flex;
+    align-items: center;
+}
+
+.buttonrow{
+    justify-content: end;
+    margin-left: 50pt;
+}
+
+.searchbar{
+    display: flex;
+    margin-left: 10pt;
+    flex-direction: row;
+}
+
+.mainpart{
+    /* padding: 70px;
+    align-items: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.btn-custom{
+    background-color:  #5FA8D3;
+    color: #1B4965;
+}
+
+.form-control-plaintext {
+    color: #5FA8D3;
+}
+
+.myform{
+    margin: 10pt;
+    margin-right: 50pt;
+    background-color: #1B4965;
+    border-radius: 5pt;
+}
+
+.rating {
+    display: flex;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    font-size: 25px;
+    cursor: pointer;
+  }
+  
+  .rating label:before {
+    content: '★';
+    margin: 5px;
+  }
+  
+  .rating input:checked ~ label:before {
+    color: yellow;
+  }
+  
+  form{
+    padding-left: 50pt;
+    padding-right: 50pt;
+  }
