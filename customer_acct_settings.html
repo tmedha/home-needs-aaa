@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="customer_acct_settings.css">
+
+    <title>Dr.Casa</title>
+  </head>
+  <body>
+    <div class="mymenubar">
+      <img src="Untitled design (5).png">
+      <h1>Dr.Casa</h1>
+      <div class="searchbar">
+        <input type="text"  id="name" name="name" placeholder="Service/Company Name">
+        <input type="text" id="cityname" name="cityname" placeholder="City" required>
+        <input type="text" id="stateabbrev" name="stateabbrev" minlength="2" maxlength="2" placeholder="State" required>
+        <input type="text" id="zipcode" name="zipcode" minlength="5" maxlength="5" placeholder="Zip Code" required>
+        <div>
+      <button>Enter</button> 
+        </div>
+      </div>
+      <div class="buttonrow">
+      <button>Service Provider</button>
+      <button>Customer</button>
+      <button>Help</button>
+      </div>
+  </div>
+    
+  <div>
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4">
+            <label for="Card-Number" class="form-label">Card Number</label>
+            <input type="text" class="form-control" id="'Card-Number' minlength="15" maxlength="19" required>
+            <div class="invalid-feedback">
+              Please provide a valid card number.
+            </div>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="CardHolder-Name" class="form-label">CardHolder Name</label>
+            <input type="text" class="form-control" id="CardHolder-Name" minlength="3" maxlength="20" required>
+            <div class="invalid-feedback">
+              Please provide a valid card holder name.
+            </div>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-1">
+            <label for="Expiration-Date" class="form-label">Expires on</label>
+            <input type="text" class="form-control" id="Expiration-Date" required>
+            <div class="invalid-feedback">
+              Please provide a valid expiration date.
+            </div>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-1">
+            <label for="CVV" class="form-label">CVV</label>
+            <input type="text" class="form-control" id="CVV" minlength="3" maxlength="4" required>
+            <div class="invalid-feedback">
+              Please provide a valid CVV.
+            </div>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+        <div class="col-md-4">
+          <label for="First-Name" class="form-label">First name</label>
+          <input type="text" class="form-control" id="First-Name" minlength="1" maxlength="15" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please provide a valid first name.
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="Last-name" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="Last-name" minlength="1" maxlength="15" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please provide a valid last name.
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Email</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Please write your email.
+            </div>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+        </div> 
+        <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">Street Address 1</label>
+            <input type="text" class="form-control" id="validationCustom03" required>
+            <div class="invalid-feedback">
+              Please provide a valid address.
+            </div>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">Street Address 2</label>
+            <input type="text" class="form-control" id="validationCustom03" required>
+            <div class="invalid-feedback">
+              Please provide a valid address.
+            </div>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+        <div class="col-md-6">
+          <label for="City-Name" class="form-label">City</label>
+          <input type="text" class="form-control" id="City-Name" minlength="3" maxlength="25"required>
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">State</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>AL</option>
+            <option>AK</option>
+            <option>AZ</option>
+            <option>AR</option>
+            <option>CA</option>
+            <option>CO</option>
+            <option>CT</option>
+            <option>DE</option>
+            <option>FL</option>
+            <option>GA</option>
+            <option>HI</option>
+            <option>ID</option>
+            <option>IL</option>
+            <option>IN</option>
+            <option>IA</option>
+            <option>KS</option>
+            <option>KY</option>
+            <option>LA</option>
+            <option>ME</option>
+            <option>MD</option>
+            <option>MA</option>
+            <option>MI</option>
+            <option>MN</option>
+            <option>MS</option>
+            <option>MO</option>
+            <option>MT</option>
+            <option>NE</option>
+            <option>NV</option>
+            <option>NH</option>
+            <option>NJ</option>
+            <option>NM</option>
+            <option>NY</option>
+            <option>NC</option>
+            <option>ND</option>
+            <option>OH</option>
+            <option>OK</option>
+            <option>OR</option>
+            <option>PA</option>
+            <option>RI</option>
+            <option>SC</option>
+            <option>SD</option>
+            <option>TN</option>
+            <option>TX</option>
+            <option>UT</option>
+            <option>VT</option>
+            <option>VA</option>
+            <option>WA</option>
+            <option>WV</option>
+            <option>WI</option>
+            <option>WY</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid state.
+          </div>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="zip-code" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="zip-code" minlength="5" maxlength="5" required>
+          <div class="invalid-feedback">
+            Please provide a valid zip.
+          </div>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+       
+        <div class="col-md-3">
+            <label for="Phone-Number" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" id="Phone-Number" minlength="10" maxlength="15" required>
+            <div class="invalid-feedback">
+              Please provide a valid phone number.
+            </div>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <br><br>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+      </form>
+</div>
+
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="customer_acct_settings.js"></script>
+    <script src="forms.js" defer></script>
+    <footer>
+    <div>
+      <div class="row">
+        <div class="col">
+          <a href="https://facebook.com">Facebook</a> |
+          <a href="https://twitter.com">Twitter</a> |
+          <a href="https://instagram.com">Instagram</a> |
+        </div>
+        <div class="col">
+          <a href="">Contact</a>
+          <a href="">Terms and Policies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </body>
+  
+</html>
