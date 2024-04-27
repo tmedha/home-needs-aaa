@@ -2,7 +2,9 @@ var states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", 
 
 
 function goToSearchResults() {
-    console.log("------STARTING------")
+    document.getElementById('myForm').submit();
+    console.log("myForm is sent");
+    console.log("------STARTING------");
     console.log("Function is called");
     console.log("grabbing values...");
     var serviceCompanyName = document.getElementById("servicecompanyname").value;

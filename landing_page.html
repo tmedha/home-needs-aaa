@@ -12,6 +12,7 @@
     <title>Dr.Casa</title>
     <script src="searchqueries.js" defer></script>
     <script src="necessary.js" defer></script>
+    <script src="php files/insert_search_query.php" defer></script>
     
     
   </head>
@@ -27,13 +28,13 @@
     </div>
     
     <div class="mainpart">
+      <form id="myForm" action="insert_search_query.php" method="POST">
       <input type="text"  id="servicecompanyname" name="servicecompanyname" minlength="5" maxlength="15" placeholder="Service/Company Name">
       <input type="text" id="cityname" name="cityname" minlength="4" maxlength="15" placeholder="City" required>
       <input type="text" id="stateabbrev" name="stateabbrev" minlength="2" maxlength="2" placeholder="State" required>
       <input type="text" id="zipcode" name="zipcode" minlength="5" maxlength="5" placeholder="Zip Code" required><br>
-      <div>
+      </form>
      <button id="submitButton" onclick="goToSearchResults()" >Enter</button> 
-      </div>
     </div>
     
     
