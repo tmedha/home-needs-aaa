@@ -17,7 +17,9 @@ if($conn->connect_error){
 
 $sql = "SELECT * FROM NewReviewInfo ORDER BY Review_ID DESC LIMIT 1";
 
-if($conn->query($sql) === TRUE){
+
+$result = $conn->query($sql);
+if($result!== FALSE){
     echo "New record created succesfully";
 } else{
     echo "Error:" . $sql . "<br>" . $conn->error;
