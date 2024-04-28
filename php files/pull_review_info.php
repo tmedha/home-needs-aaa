@@ -15,12 +15,7 @@ if($conn->connect_error){
     die("connection failed: " . $conn->connect_error);
 }
 
-$serviceorcompany = $_POST['servicecompanyname'];
-$cityname = $_POST['cityname'];
-$stateabbreviation = $_POST['stateabbrev'];
-$zipcode = $_POST['zipcode'];
-
-$sql = "INSERT INTO `searchquery`(`ServiceorCompany`, `CityName`, `StateAbbreviation`, `Zipcode`) VALUES ('$serviceorcompany','$cityname','$stateabbreviation',$zipcode)";
+$sql = "SELECT * FROM NewReviewInfo ORDER BY Review_ID DESC LIMIT 1";
 
 if($conn->query($sql) === TRUE){
     echo "New record created succesfully";
