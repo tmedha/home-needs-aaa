@@ -33,16 +33,16 @@ if ($result->num_rows == 0) {
     echo "<br>";
 }
 
-//make the connection
-$conn = new mysqli($server, $myusername, $mypassword, "mysql");
-$table_name = "searchquery";
+$conn = new mysqli($servername, $username, $password, $dbname);
+$table_name = "client_information";
 $sql_check_table = "SHOW TABLES LIKE '$table_name'";
 
 $result = $conn->query($sql_check_table);
+
 if ($result->num_rows == 0) {
     // Table does not exist, create it
     $sql_create_table = "CREATE TABLE $table_name (
-        ServiceorCompany varchar(15), CityName varchar(15), StateAbbreviation varchar(2), Zipcode int(4))";
+        first_name varchar(20), last_name varchar(20), email varchar(20), country_code varchar(4), phone varchar(20), password varchar(300))";
 
     if ($conn->query($sql_create_table) === TRUE) {
         echo "Table $table_name created successfully";
@@ -56,26 +56,17 @@ if ($result->num_rows == 0) {
 }
 
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
-    $serviceorcompany = $_POST['servicecompanyname'];
-    $cityname = $_POST['cityname'];
-    $stateabbreviation = $_POST['stateabbrev'];
-    $zipcode = $_POST['zipcode'];
+$sql = "SELECT * FROM ";
 
-    // Write sql query to insert data into the database
-    $sql = "INSERT INTO `searchquery`(`ServiceorCompany`, `CityName`, `StateAbbreviation`, `Zipcode`) 
-            VALUES ('$serviceorcompany','$cityname','$stateabbreviation',$zipcode)";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-    // Close connection
-    $conn->close();
-    header("Location: results.html");
- 
-exit;
+$result = $conn->query($sql);
+if($result!== FALSE){
+    echo "New record created succesfully";
+} else{
+    echo "Error:" . $sql . "<br>" . $conn->error;
 }
+
+//close the connection
+$conn->close();
+
+?>
