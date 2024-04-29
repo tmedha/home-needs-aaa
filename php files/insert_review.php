@@ -35,14 +35,14 @@ if ($result->num_rows == 0) {
 
 //make the connection
 $conn = new mysqli($server, $myusername, $mypassword, "mysql");
-$table_name = "searchquery";
+$table_name = "NewReviewInfo";
 $sql_check_table = "SHOW TABLES LIKE '$table_name'";
 
 $result = $conn->query($sql_check_table);
 if ($result->num_rows == 0) {
     // Table does not exist, create it
     $sql_create_table = "CREATE TABLE $table_name (
-        ServiceorCompany varchar(15), CityName varchar(15), StateAbbreviation varchar(2), Zipcode int(4))";
+        rDescription varchar(250), Star int(1))";
 
     if ($conn->query($sql_create_table) === TRUE) {
         echo "Table $table_name created successfully";
@@ -58,14 +58,12 @@ if ($result->num_rows == 0) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
-    $serviceorcompany = $_POST['servicecompanyname'];
-    $cityname = $_POST['cityname'];
-    $stateabbreviation = $_POST['stateabbrev'];
-    $zipcode = $_POST['zipcode'];
+    $starRating = $_POST['rating'];
+    $revdescription = $_POST['name'];
 
     // Write sql query to insert data into the database
-    $sql = "INSERT INTO `searchquery`(`ServiceorCompany`, `CityName`, `StateAbbreviation`, `Zipcode`) 
-            VALUES ('$serviceorcompany','$cityname','$stateabbreviation',$zipcode)";
+    $sql = "INSERT INTO `NewReviewInfo`(`rDescription`, `Star`) 
+            VALUES ('$revdescription','$starRating')";
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
@@ -75,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Close connection
     $conn->close();
-    header("Location: results.html");
+    header("Location: services.html");
  
 exit;
 }
