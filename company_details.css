@@ -32,7 +32,7 @@ footer{
     text-align: center;
     margin-top: auto;
     bottom: 0;
-    position: relative;
+    position: fixed;
     width: 100%;
 }
 

@@ -103,9 +103,9 @@ footer a:hover{
 
 .row.srvI {
     display: flex;
-    align-items: end; /* Center vertically */
-    justify-content: end; /* Center horizontally */
-    text-align: end; /* Center text within the row */
+    align-items: center;
+    justify-content: center; 
+    text-align: center; 
     margin-top: 0px; /* Optional: Adjust top margin as needed */
     padding-right: 300pt ;
     background-color: #1B4965;
@@ -113,16 +113,16 @@ footer a:hover{
 }
 
 .row.companyname{
-    text-align: end;
+    text-align: center;
     display: flex;
-    align-items: end; /* Center vertically */
-    justify-content: end;
+    align-items: center; /* Center vertically */
+    justify-content: center;
 }
 
 .rating {
     display: flex;
-    align-items: end;
-    justify-content: end;
+    align-items: center;
+    justify-content: center;
   }
   
   .rating input {
