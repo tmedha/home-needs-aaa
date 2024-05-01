@@ -40,7 +40,7 @@ footer{
     text-align: center;
     margin-top: auto;
     bottom: 0;
-    position: absolute;
+    position: relative;
     width: 100%;
 }
 
@@ -71,4 +71,14 @@ footer a:hover{
 
 .sectionheader{
     color: #BEE9E8;
+}
+
+.whoweare{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.howwedoit{
+    margin-left: 50px;
+    margin-right: 50px; 
+    margin-bottom: 50px;
 }

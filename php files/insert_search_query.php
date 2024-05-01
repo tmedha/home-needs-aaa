@@ -34,7 +34,7 @@ if ($result->num_rows == 0) {
 }
 
 //make the connection
-$conn = new mysqli($server, $myusername, $mypassword, "mysql");
+$conn = new mysqli($server, $myusername, $mypassword, $databasename);
 $table_name = "searchquery";
 $sql_check_table = "SHOW TABLES LIKE '$table_name'";
 
