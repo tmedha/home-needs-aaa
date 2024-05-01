@@ -32,10 +32,10 @@
   </div>
     
   <div>
-    <form class="row g-3 needs-validation" novalidate>
+    <form action="customer_acct_settings_form.php" method="POST" class="row g-3 needs-validation" novalidate>
         <div class="col-md-4">
             <label for="Card-Number" class="form-label">Card Number</label>
-            <input type="text" class="form-control" placeholder="Card Number" id="Card-Number"minlength="15" maxlength="19" required>
+            <input type="text" name="Card-Number" class="form-control" placeholder="Card Number" id="Card-Number"minlength="15" maxlength="19" required>
             <div class="invalid-feedback">
               Please provide a valid card number.
             </div>
@@ -45,7 +45,7 @@
           </div>
           <div class="col-md-3">
             <label for="CardHolder-Name2" class="form-label">CardHolder Name</label>
-            <input type="text" class="form-control" placeholder="CardHolder Name" id="CardHolder-Name2" minlength="3" maxlength="20" required>
+            <input type="text" name="CardHolder-Name2" class="form-control" placeholder="CardHolder Name" id="CardHolder-Name2" minlength="3" maxlength="20" required>
             <div class="invalid-feedback">
               Please provide a valid card holder name.
             </div>
@@ -55,7 +55,7 @@
           </div>
           <div class="col-md-1">
             <label for="Expiration-Date" class="form-label">Expires on</label>
-            <input type="text" class="form-control" placeholder="Expiration Date" id="Expiration-Date" required>
+            <input type="text" name="Expiration-Date" class="form-control" placeholder="Expiration Date" id="Expiration-Date" required>
             <div class="invalid-feedback">
               Please provide a valid expiration date.
             </div>
@@ -65,7 +65,7 @@
           </div>
           <div class="col-md-1">
             <label for="CVV" class="form-label">CVV</label>
-            <input type="text" class="form-control" placeholder="CVV" id="CVV" minlength="3" maxlength="4" required>
+            <input type="text" name="CVV" class="form-control" placeholder="CVV" id="CVV" minlength="3" maxlength="4" required>
             <div class="invalid-feedback">
               Please provide a valid CVV.
             </div>
@@ -75,7 +75,7 @@
           </div>
         <div class="col-md-4">
           <label for="First-Name2" class="form-label">First name</label>
-          <input type="text" class="form-control" placeholder="First Name" id="First-Name2" minlength="1" maxlength="15" required>
+          <input type="text" name="First-Name2" class="form-control" placeholder="First Name" id="First-Name2" minlength="1" maxlength="15" required>
           <div class="valid-feedback">
             Looks good!
           </div>
@@ -85,7 +85,7 @@
         </div>
         <div class="col-md-4">
           <label for="Last-name2" class="form-label">Last name</label>
-          <input type="text" class="form-control" placeholder="Last Name" id="Last-name2" minlength="1" maxlength="15" required>
+          <input type="text" name="Last-name2" class="form-control" placeholder="Last Name" id="Last-name2" minlength="1" maxlength="15" required>
           <div class="valid-feedback">
             Looks good!
           </div>
@@ -97,7 +97,7 @@
           <label for="validationCustomUsername" class="form-label">Email</label>
           <div class="input-group has-validation">
             <span class="input-group-text" id="inputGroupPrepend">@</span>
-            <input type="text" class="form-control" placeholder="Email" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <input type="text" name="Email" class="form-control" placeholder="Email" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
             <div class="invalid-feedback">
               Please write your email.
             </div>
@@ -108,7 +108,7 @@
         </div> 
         <div class="col-md-6">
             <label for="validationCustom03" class="form-label">Street Address 1</label>
-            <input type="text" class="form-control" placeholder="Street Address" id="validationCustom03" required>
+            <input type="text" name="StreetAddress1" class="form-control" placeholder="Street Address" id="validationCustom03" required>
             <div class="invalid-feedback">
               Please provide a valid address.
             </div>
@@ -118,7 +118,7 @@
           </div>
           <div class="col-md-6">
             <label for="validationCustom03" class="form-label">Street Address 2</label>
-            <input type="text" class="form-control" placeholder="Apt Number, etc" id="validationCustom03" required>
+            <input type="text" name="StreetAddress2" class="form-control" placeholder="Apt Number, etc" id="validationCustom03" required>
             <div class="invalid-feedback">
               Please provide a valid address.
             </div>
@@ -128,7 +128,7 @@
           </div>
         <div class="col-md-6">
           <label for="City-Name2" class="form-label">City</label>
-          <input type="text" class="form-control" placeholder="City Name" id="City-Name2" minlength="3" maxlength="25"required>
+          <input type="text" name="City-Name2" class="form-control" placeholder="City Name" id="City-Name2" minlength="3" maxlength="25"required>
           <div class="invalid-feedback">
             Please provide a valid city.
           </div>
@@ -138,7 +138,7 @@
         </div>
         <div class="col-md-3">
           <label for="validationCustom04" class="form-label">State</label>
-          <select class="form-select" id="validationCustom04" required>
+          <select class="form-select" name="State" id="validationCustom04" required>
             <option selected disabled value="">Choose...</option>
             <option>AL</option>
             <option>AK</option>
@@ -200,7 +200,7 @@
         </div>
         <div class="col-md-3">
           <label for="zip-code" class="form-label">Zip</label>
-          <input type="text" class="form-control" placeholder="Zip code" id="zip-code" minlength="5" maxlength="5" required>
+          <input type="text" name="Zipcode" class="form-control" placeholder="Zip code" id="zip-code" minlength="5" maxlength="5" required>
           <div class="invalid-feedback">
             Please provide a valid zip.
           </div>
@@ -211,7 +211,7 @@
        
         <div class="col-md-3">
             <label for="Phone-Number" class="form-label">Phone Number</label>
-            <input type="text" class="form-control" placeholder="Phone Number" id="Phone-Number" minlength="10" maxlength="15" required>
+            <input type="text" name="Phone-Number" class="form-control" placeholder="Phone Number" id="Phone-Number" minlength="10" maxlength="15" required>
             <div class="invalid-feedback">
               Please provide a valid phone number.
             </div>
