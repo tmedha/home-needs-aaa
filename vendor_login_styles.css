@@ -38,13 +38,18 @@ body {
 
 .card-header {
     border-radius: 15px 15px 0 0; /* Adjust border-radius to match the top corners of the card */
-    background-color: #007bff;
+    background-color: #1B4965;
     color: #fff;
     padding: 10px;
 }
 
+
 .card-body {
     padding: 20px;
+}
+
+nav{
+    color:#CAE9FF ;
 }
 
 /* Footer Styles */
