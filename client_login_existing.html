@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Client Login</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="client_login_styles.css">
 </head>
@@ -17,7 +17,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto"> <!-- Align to the right -->
                     <li class="nav-item">
-                        <a class="nav-link" href="about_us.html">About Us</a>
+                        <a class="nav-link" href="aboutus.html">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="vendor_signup.html">Sign Up as a Professional</a>
@@ -32,39 +32,37 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Contact Us</h4>
+                        <h4>Account already exists! Login</h4>
                     </div>
                     <div class="card-body">
-                        <form action="contact_process.php" method="post" id="signupForm">
+                        <form action="client_login_process.php" method="post" id="loginForm">
                             <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
+                                <label for="username">Username:</label>
+                                <input type="text" class="form-control" id="username" name="username" required required placeholder="Enter your email">
                             </div>
                             <div class="form-group">
-                                <label for="category">Problem Category:</label>
-                                <select class="form-control" id="category" name="category" required>
-                                    <option value="">Select Category</option>
-                                    <option value="Category 1">Category 1</option>
-                                    <option value="Category 2">Category 2</option>
-                                    <option value="Category 3">Category 3</option>
-                                </select>
+                                <label for="password">Password:</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="password" name="password" required required placeholder="Enter your password">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">
+                                            <input type="checkbox" id="showPasswordCheckbox" onclick="togglePasswordVisibility()"> Show
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="description">Problem Description:</label>
-                                <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                            <div class="mt-3 text-center" id="message"></div>
+                            <!-- <div class="form-group">
+                                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+                            </div> -->
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            <p class="mt-3">New? <a href="client_signup.html">Click Here</a> to sign up.</p>
                         </form>
-                        <div class="mt-3 text-center">
-                            <p><a href="faq.html">Click here</a> for quick answers.</p>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    
     <footer>
         <div class="container">
             <div class="row">
@@ -81,12 +79,22 @@
         </div>
     </footer>
 
-    <script src="client_login_script.js"></script>
     <script>
-        function submitForm() {
-            var messageDiv = document.getElementById("message");
-            messageDiv.innerText = "Ticket Submitted";
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var checkbox = document.getElementById("showPasswordCheckbox");
+            if (checkbox.checked) {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
         }
+        document.getElementById("loginForm").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); // Prevent form submission
+                document.getElementById("loginForm").submit(); // Submit the form
+            }
+        });
     </script>
 </body>
 </html>

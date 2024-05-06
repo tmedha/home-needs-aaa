@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="landing_page.html"><img src="logo.png" alt="Logo" style="max-height: 40px;"></a>
+            <a class="navbar-brand" href="landing_page.php"><img src="logo.png" alt="Logo" style="max-height: 40px;"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -22,7 +22,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="vendor_signup.html">Sign Up as a Professional</a>
                     </li>
-                </u
+                </ul>
             </div>
         </div>
     </nav>
@@ -32,7 +32,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Login</h4>
+                        <h4>Client Login</h4>
                     </div>
                     <div class="card-body">
                         <form action="client_login_process.php" method="post" id="loginForm">
@@ -46,7 +46,7 @@
                                     <input type="password" class="form-control" id="password" name="password" required required placeholder="Enter your password">
                                     <div class="input-group-append">
                                         <span class="input-group-text">
-                                            <input type="checkbox" id="showPasswordCheckbox" onclick="showPassword()"> Show
+                                            <input type="checkbox" id="showPasswordCheckbox" onclick="togglePasswordVisibility()"> Show
                                         </span>
                                     </div>
                                 </div>
@@ -62,7 +62,6 @@
             </div>
         </div>
     </div>
-
     <footer>
         <div class="container">
             <div class="row">
@@ -78,23 +77,22 @@
             </div>
         </div>
     </footer>
-
-    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
-    <script src="client_login_script.js"></script>
     <script>
-        function showPassword() {
-            var passwordField = document.getElementById("password");
-            var showPasswordCheckbox = document.getElementById("showPasswordCheckbox");
-            if (passwordField.type === "password") {
-                passwordField.type = "text";
-                showPasswordCheckbox.checked = true;
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var checkbox = document.getElementById("showPasswordCheckbox");
+            if (checkbox.checked) {
+                passwordInput.type = "text";
             } else {
-                passwordField.type = "password";
-                showPasswordCheckbox.checked = false;
+                passwordInput.type = "password";
             }
         }
-
-        
+        document.getElementById("loginForm").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); // Prevent form submission
+                document.getElementById("loginForm").submit(); // Submit the form
+            }
+        });
     </script>
 </body>
 </html>
