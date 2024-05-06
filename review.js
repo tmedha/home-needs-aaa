@@ -1,5 +1,5 @@
 function goToWriteAReview() {
-    window.location.href = 'writing_reviews.html';
+    window.location.href = 'writing_reviews.php';
 }
 
 function getStarRating(){
@@ -24,5 +24,5 @@ function submitReview(event){
     var revDescription = document.getElementById("exampleFormControlTextarea1").value;
     console.log("Values grabbed");
     console.log("Star Rating is " + revStar +  " Review Description is " + revDescription);
-    window.location.href = 'services.html';
+    window.location.href = 'services.php';
 }

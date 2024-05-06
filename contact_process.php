@@ -10,10 +10,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $description = $_POST["description"];
 
     // Database connection parameters
-    $servername = "localhost";
-    $db_username = "root";
-    $db_password = "";
-    $database = "homeneeds";
+    $servername = "sql212.infinityfree.com";
+    $db_username = "if0_36488871";
+    $db_password = "zENhXnCqaF";
+    $database = "if0_36488871_drcasa";
 
     // Create connection
     $conn = new mysqli($servername, $db_username, $db_password, $database);
@@ -29,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->query($sql) === TRUE) {
         // Query inserted successfully, redirect to thank you page or display success message
         header("Location: thank_you.php");
+        // header("Location: cart.php");
         exit();
     } else {
         // Error occurred while inserting query, display error message
