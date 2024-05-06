@@ -10,17 +10,17 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="landing_page.html"><img src="logo.png" alt="Logo" style="max-height: 40px;"></a>
+            <a class="navbar-brand" href="landing_page.php"><img src="logo.png" alt="Logo" style="max-height: 40px;"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto"> <!-- Align to the right -->
                     <li class="nav-item">
-                        <a class="nav-link" href="about_us.html">About Us</a>
+                        <a class="nav-link" href="aboutus.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="client_signup.html">Sign Up as a Customer</a>
+                        <a class="nav-link" href="vendor_signup.html">Sign Up as a Professional</a>
                     </li>
                 </ul>
             </div>
@@ -68,20 +68,59 @@
                                     <option value="Company">Company</option>
                                 </select>
                             </div>
-                            <div class="form-group" id="company_details_div" style="display: none;">
-                                <label for="company_details">Company Details:</label>
-                                <input type="text" class="form-control" id="company_details" name="company_details">
+                            <div class="form-group">
+                                <label for="vendor_details">Vendor Details:</label>
+                                <textarea class="form-control" id="vendor_details" name="vendor_details" rows="3"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="services">Preferred Services:</label>
                                 <select class="form-control" id="services" name="services">
                                     <option value="">Select Service</option>
-                                    <option value="Service 1">Service 1</option>
-                                    <option value="Service 2">Service 2</option>
-                                    <option value="Service 3">Service 3</option>
+                                    <option value="Service 1">Gardening</option>
+                                    <option value="Service 2">Roof Repair</option>
+                                    <option value="Service 3">Carpentry</option>
                                 </select>
                                 <button type="button" class="btn btn-secondary mt-2" onclick="addService()">Add Service</button>
-                                <textarea class="form-control mt-2" id="preferred_services_text" rows="3" readonly></textarea>
+                                <textarea class="form-control mt-2" id="preferred_services_text" form="vendorSignupForm" name="preferred_services_text" rows="3" readonly></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="cityname">City:</label>
+                                <input type="text" class="form-control" id="cityname" name="cityname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="stateabbrev">State:</label>
+                                <input type="text" class="form-control" id="stateabbrev" name="stateabbrev" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="zipcode1">Zipcode 1:</label>
+                                <input type="text" class="form-control" id="zipcode1" name="zipcode1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="zipcode2">Zipcode 2:</label>
+                                <input type="text" class="form-control" id="zipcode2" name="zipcode2" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="password" name="password" required>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">
+                                            <input type="checkbox" id="showPasswordCheckbox" onclick="togglePasswordVisibility('password')"> Show
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm_password">Confirm Password:</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">
+                                            <input type="checkbox" id="showConfirmPasswordCheckbox" onclick="togglePasswordVisibility('confirm_password')"> Show
+                                        </span>
+                                    </div>
+                                </div>
+                                <div id="passwordError" class="text-danger d-none">Passwords do not match.</div>
                             </div>
                             <button type="submit" class="btn btn-primary">Sign Up</button>
                         </form>
@@ -110,7 +149,6 @@
         </div>
     </footer>
 
-    <script src="vendor_signup_script.js"></script>
     <script>
         function addService() {
             var serviceSelect = document.getElementById("services");
@@ -123,26 +161,22 @@
             }
         }
 
-        function validateForm() {
-            var vendorType = document.getElementById("vendor_type").value;
-            var companyDetails = document.getElementById("company_details").value;
+        function togglePasswordVisibility(inputId) {
+            var passwordField = document.getElementById(inputId);
+            passwordField.type = passwordField.type === "password" ? "text" : "password";
+        }
 
-            if (vendorType === "Company" && companyDetails === "") {
-                alert("Please enter company details.");
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirm_password = document.getElementById("confirm_password").value;
+
+            if (password !== confirm_password) {
+                document.getElementById("passwordError").classList.remove("d-none");
                 return false;
             }
 
             return true;
         }
-
-        document.getElementById("vendor_type").addEventListener("change", function() {
-            var companyDetailsDiv = document.getElementById("company_details_div");
-            if (this.value === "Company") {
-                companyDetailsDiv.style.display = "block";
-            } else {
-                companyDetailsDiv.style.display = "none";
-            }
-        });
     </script>
 </body>
 </html>

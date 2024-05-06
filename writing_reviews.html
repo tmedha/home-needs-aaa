@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,80 +14,80 @@
     <script src="review.js" defer></script>
     <script src="searchqueries.js" defer></script>
     <script src="functions.js" defer></script>
-  </head>
-  <body>
-    <div class="mymenubar">
-      <img src="logo.png">
-      <h1>Dr.Casa</h1>
-      <div class="searchbar">
-        <input type="text"  id="servicecompanyname" name="servicecompanyname" placeholder="Service/Company Name">
+</head>
+<body>
+<div class="mymenubar">
+    <img src="Untitled design (5).png">
+    <h1>Dr.Casa</h1>
+    <div class="searchbar">
+        <input type="text" id="servicecompanyname" name="servicecompanyname" placeholder="Service/Company Name">
         <input type="text" id="cityname" name="cityname" placeholder="City" required>
         <input type="text" id="stateabbrev" name="stateabbrev" minlength="2" maxlength="2" placeholder="State" required>
         <input type="text" id="zipcode" name="zipcode" minlength="5" maxlength="5" placeholder="Zip Code" required><br>
         <div>
-       <button id="submitButton" onclick="goToSearchResults()" >Enter</button> 
+            <button id="submitButton" onclick="goToSearchResults()">Enter</button>
         </div>
-      </div>
-      <div class="buttonrow">
-      <button onclick="goToVendorSignUp()">Service Provider</button>
-      <button onclick="goToCustomerSignUp()">Customer</button>
-      <button onclick="goGetHelp()">Help</button>
-      </div>
-  </div>
-    
+    </div>
+    <div class="buttonrow">
+        <button onclick="goToVendorSignUp()">Service Provider</button>
+        <button onclick="goToCustomerSignUp()">Customer</button>
+        <button onclick="goGetHelp()">Help</button>
+    </div>
+</div>
 
-  <h2>Write A Review</h2>
-    <div class="myform">
 
-     <div class="mb-3">
+<h2>Write A Review</h2>
+<div class="myform">
+
+    <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label"><h3>Service</h3></label>
         <div class="col-sm-10">
             <h5><input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Service Name"></h5>
-          </div>
-      </div>
-
-      <form id="reviewForm" action="insert_review.php" method="post"onsubmit="submitReview(event)">
-      <div class="rating">
-        <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
-        <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
-        <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
-        <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
-        <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
-      </div>
-
-
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label"><h4>Description</h4></label>
-        <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3" placeholder="Description"></textarea>
-      </div>
-      <button type="submit" class="btn btn-custom mb-3" ">Submit Review</button>
-      </form>
+        </div>
     </div>
 
-    
-    
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <form id="reviewForm" action="submit_review.php" method="post">
+        <div class="rating">
+            <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+        </div>
 
-    <footer>
+
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"><h4>Description</h4></label>
+            <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3" placeholder="Description"></textarea>
+        </div>
+        <button type="submit" class="btn btn-custom mb-3" ">Submit Review</button>
+    </form>
+</div>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<footer>
     <div>
-      <div class="row">
-        <div class="col">
-          <a href="https://facebook.com">Facebook</a> |
-          <a href="https://twitter.com">Twitter</a> |
-          <a href="https://instagram.com">Instagram</a> |
+        <div class="row">
+            <div class="col">
+                <a href="https://facebook.com">Facebook</a> |
+                <a href="https://twitter.com">Twitter</a> |
+                <a href="https://instagram.com">Instagram</a> |
+            </div>
+            <div class="col">
+                <a href="about_us.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="">Terms and Policies</a>
+            </div>
         </div>
-        <div class="col">
-          <a href="about_us.html">About Us</a>
-          <a href="contact.html">Contact</a>
-          <a href="">Terms and Policies</a>
-        </div>
-      </div>
     </div>
-  </footer>
-  </body>
-  
+</footer>
+</body>
+
 </html>
